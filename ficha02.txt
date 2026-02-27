@@ -1,48 +1,40 @@
-int main(){
-    
+#include <iostream>
+
+int main() {
+
     std::cout << "Menu:" << std::endl;
     std::cout << "1 - Calcular a medida em polegadas:" << std::endl;
     std::cout << "2 - Calcular a temperatura em graus celsius:" << std::endl;
-    
-    int opcao;
-    
-    std::cin >> opcao;
-    
-       if (opcao == 1){
-        //declaracao das variáveis
-    	float polegadas, centimetros;
 
-    	//output
-    	std::cout << "Introduza a medida em polegadas: ";
-    	//input
-    	std::cin >> polegadas;
-    
-    	//processamento do calculo
-    	centimetros = polegadas * 2.54;
-    
-    	//output do resultado
-    	std::cout << polegadas << " polegadas equivalem a "
-         << centimetros << " centimetros." << endl;
-        
-       }else if(opcao == 2){
-        //declaracao das variáveis
+    int opcao;
+    std::cin >> opcao;
+
+    if (opcao == 1) {
+        float polegadas, centimetros;
+
+        std::cout << "Introduza a medida em polegadas: ";
+        std::cin >> polegadas;
+
+        centimetros = polegadas * 2.54;
+
+        std::cout << polegadas << " polegadas equivalem a "
+             << centimetros << " centimetros." << std::endl;
+
+    } else if (opcao == 2) {
         float celsius;
-        
-        //output
+
         std::cout << "Introduza a temperatura em graus celsius: ";
-        //input
         std::cin >> celsius;
-        
-        //processamento do calculo
+
         float far = celsius * 1.8 + 32;
         float kel = celsius + 273.15;
-        
-        //output do resultado
-        std::cout << "Temperatura em Fahrenheit: " << far << endl;
-    	std::cout << "Temperatura em Kelvin: " << kel << endl;
-        
-    }else{
-        std::cout << "Opção inválida";
-    
+
+        std::cout << "Temperatura em Fahrenheit: " << far << std::endl;
+        std::cout << "Temperatura em Kelvin: " << kel << std::endl;
+
+    } else {
+        std::cout << "Opção inválida" << std::endl;
+    }
+
     return 0;
 }
